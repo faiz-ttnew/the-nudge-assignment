@@ -1,0 +1,29 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+  grid-gap: 10px; /* Gap between grid items */
+  /* margin: 20px; */
+}
+
+/* Style the grid items */
+.grid-item {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  height: 100px;
+}
+
+
+.grid-container1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* background-color: #2196F3; */
+  padding: 5px;
+}
+.grid-item1 {
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  /* border: 1px solid #ccc; */
+  padding: 5px;
+  /* font-size: 30px; */
+  text-align: center;
+}

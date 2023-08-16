@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
@@ -45,42 +46,55 @@ function Login() {
   return (
     <>
       <br />
-      <h3>Sign In</h3>
-      <hr />
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label">
-            Email address
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            name="email"
-            value={credentials.email}
-            aria-describedby="emailHelp"
-            onChange={onChange}
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="password" className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            id="password"
-            name="password"
-            value={credentials.password}
-            onChange={onChange}
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-      </form>
-      <br />
-      <Link to="/register">Register</Link>
+      <Container>
+        <Row className="my-5">
+          <Col></Col>
+          <Col>
+            <Card style={{ width: "40rem" }}>
+              <Card.Header>
+                <h4>Sign In</h4>
+              </Card.Header>
+              <Card.Body>
+                <form onSubmit={handleSubmit}>
+                  <div className="mb-3">
+                    <label htmlFor="email" className="form-label">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      className="form-control"
+                      id="email"
+                      name="email"
+                      value={credentials.email}
+                      aria-describedby="emailHelp"
+                      onChange={onChange}
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="password" className="form-label">
+                      Password
+                    </label>
+                    <input
+                      type="password"
+                      className="form-control"
+                      id="password"
+                      name="password"
+                      value={credentials.password}
+                      onChange={onChange}
+                    />
+                  </div>
+                  <button type="submit" className="btn btn-primary">
+                    Submit
+                  </button>
+                </form>
+                <br />
+                <Link to="/register">Register</Link>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col></Col>
+        </Row>
+      </Container>
     </>
   );
 }
